@@ -1,0 +1,14 @@
+When I run "make check" (or "make PYTHON=python check" since my "python3" is called "python") it finds all files except for testing/make
+and testing/trip.  I am passing all the other tests (graph.UnitTest, make.UnitTest, trip.UnitTest, grader.SimpleUnitTest) so it is clearly
+able to find files in proj3 other than those in the testing folder.  I have checked with friends and the files in testing under testing/make
+and testing/trip are all in the right place.  However, I still get this error:
+
+make[1]: Entering directory 'C:/Users/Mwarady22/repo/proj3/testing'
+rm -f _ERROR_FLAG_;
+C:/Program Files/Git/mingw64/bin/make -C make check || touch _ERROR_FLAG_
+/usr/bin/sh: C:/Program: No such file or directory
+C:/Program Files/Git/mingw64/bin/make -C trip check || touch _ERROR_FLAG_
+/usr/bin/sh: C:/Program: No such file or directory
+test ! -e _ERROR_FLAG_
+make[1]: *** [Makefile:38: check] Error 1
+make[1]: Leaving directory 'C:/Users/Mwarady22/repo/proj3/testing'
